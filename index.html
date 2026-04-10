@@ -4,19 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="பழைய ஏற்பாடு கண்ணோட்டம் - ஆதியாகமம் முதல் மல்கியா வரை ஒரு ஆன்மீக பயணம். Old Testament Overview Notes in Tamil.">
-  <title>பழைய ஏற்பாடு கண்ணோட்டம் | Old Testament Overview</title>
+  <title>J Seeds Bible College | Old Testament Overview</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- ========== LOGIN OVERLAY ========== -->
+<div id="login-overlay" class="login-overlay">
+  <div class="login-card">
+    <div class="login-logo">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M5 7h14"/></svg>
+      <h2>J Seeds Bible College</h2>
+    </div>
+    <p class="login-subtitle">Scholar's Gateway | பழைய ஏற்பாடு ஆய்வு</p>
+    <div class="login-form">
+      <div class="input-group">
+        <label for="username">Scholar Name</label>
+        <input type="text" id="username" placeholder="Enter ID" autocomplete="username">
+      </div>
+      <div class="input-group">
+        <label for="password">Sacred Word</label>
+        <input type="password" id="password" placeholder="Enter Password" autocomplete="current-password">
+      </div>
+      <button id="login-btn" class="hero-btn" style="width:100%; margin-top:10px;">Enter Sanctuary</button>
+      <p id="login-error" class="login-error"></p>
+    </div>
+  </div>
+</div>
+
+<div id="main-content" style="display: none;">
+
 <!-- ========== NAVBAR ========== -->
 <nav class="navbar" id="navbar">
-  <a href="#" class="nav-logo">✝ OT Overview</a>
+  <a href="#" class="nav-logo">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px; color:var(--gold);"><path d="M12 2v20M5 7h14"/></svg>
+    J Seeds Bible College
+  </a>
   <ul class="nav-links" id="nav-links">
     <li><a href="#timeline">Timeline</a></li>
     <li><a href="#books">Books</a></li>
     <li><a href="#themes">Themes</a></li>
-    <li><a href="#cta">Study</a></li>
+    <li><a href="#map">Map</a></li>
+    <li><a href="#artifacts">Artifacts</a></li>
+    <li><a href="#quiz">Quiz</a></li>
+    <li><a href="#scroll">Inspiration</a></li>
+    <li><a href="#videos">Videos</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -27,31 +59,44 @@
 <section class="hero" id="hero">
   <div class="hero-particles"></div>
   <div class="hero-content">
-    <div class="hero-cross">✝</div>
-    <h1 class="hero-title">Old Testament Overview</h1>
-    <p class="hero-tamil">பழைய ஏற்பாடு கண்ணோட்டம்</p>
-    <div class="hero-divider"></div>
-    <p class="hero-subtitle">A Journey from Genesis to Malachi<br>ஆதியாகமம் முதல் மல்கியா வரை ஒரு ஆன்மீக பயணம்</p>
-    <div class="hero-divider"></div>
-    <a href="#timeline" class="hero-btn">Start the Journey ➜</a>
-  </div>
-  <div class="hero-scroll-indicator">
-    <span style="font-size:0.75rem;font-family:var(--font-heading);letter-spacing:2px;">SCROLL</span>
-    <span>▼</span>
-  </div>
+      <div class="hero-cross">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M5 7h14"/></svg>
+      </div>
+      <h1 class="hero-title" style="font-size: clamp(2rem, 6vw, 4rem); letter-spacing: 4px;">J Seeds Bible College</h1>
+      <p class="hero-tamil" style="font-size: 1.5rem; margin-top: 10px;">பழைய ஏற்பாடு கண்ணோட்டம்</p>
+      <div class="hero-divider"></div>
+      <h2 class="section-title" style="color:var(--gold); margin-top: 20px;">Old Testament Overview</h2>
+      <p class="hero-subtitle">A Comprehensive Journey from Genesis to Malachi<br>ஆதியாகமம் முதல் மல்கியா வரை ஒரு ஆழமான ஆய்வு</p>
+      <div class="hero-divider"></div>
+      <a href="#timeline" class="hero-btn">
+        Start Your Study
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;"><path d="m12 19 7-7-7-7M19 12H5"/></svg>
+      </a>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span style="font-size:0.75rem;font-family:var(--font-heading);letter-spacing:2px;">SCROLL</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 13 5 5 5-5M7 6l5 5 5-5"/></svg>
+    </div>
 </section>
 
 <!-- ========== VERSE BANNER 1 ========== -->
 <div class="verse-banner">
-  <p class="verse-text">"ஆதியிலே தேவன் வானத்தையும் பூமியையும் சிருஷ்டித்தார்."</p>
-  <p class="verse-ref">— ஆதியாகமம் 1:1</p>
+  <div class="verse-container reveal">
+    <div class="verse-quote-icon quote-left">“</div>
+    <p class="verse-text">"ஆதியிலே தேவன் வானத்தையும் பூமியையும் சிருஷ்டித்தார்."</p>
+    <div class="verse-divider"></div>
+    <p class="verse-ref">ஆதியாகமம் 1:1</p>
+    <div class="verse-quote-icon quote-right">“</div>
+  </div>
 </div>
 
 <!-- ========== TIMELINE ========== -->
 <section class="section section-dark" id="timeline">
   <div class="container">
     <div class="section-header">
-      <span class="section-icon">⏳</span>
+      <div class="section-icon-wrap">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
       <h2 class="section-title">Biblical Timeline</h2>
       <p class="section-title-tamil">வேதாகம காலவரிசை</p>
       <div class="section-line"></div>
@@ -62,7 +107,10 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <span class="timeline-era">கி.மு. ~4000</span>
-          <h3 class="timeline-title">🌍 சிருஷ்டிப்பு – Creation</h3>
+          <h3 class="timeline-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px; vertical-align:middle;"><circle cx="12" cy="12" r="10"/><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            சிருஷ்டிப்பு – Creation
+          </h3>
           <p class="timeline-desc">தேவன் வானத்தையும் பூமியையும் சிருஷ்டித்தார். மனிதனை தமது சாயலிலும் ரூபத்திலும் உருவாக்கினார்.</p>
           <div class="timeline-detail"><p>ஆதியாகமம் 1–2 அதிகாரங்கள். ஆறு நாட்களில் சிருஷ்டிப்பு நிறைவடைந்து ஏழாம் நாள் தேவன் ஓய்வு கொண்டார். ஏதேன் தோட்டத்தில் ஆதாமும் ஏவாளும் வாழ்ந்தார்கள்.</p></div>
         </div>
@@ -72,7 +120,10 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <span class="timeline-era">கி.மு. ~2100</span>
-          <h3 class="timeline-title">👨‍👩‍👧‍👦 முற்பிதாக்கள் – Patriarchs</h3>
+          <h3 class="timeline-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px; vertical-align:middle;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            முற்பிதாக்கள் – Patriarchs
+          </h3>
           <p class="timeline-desc">ஆபிரகாம், ஈசாக்கு, யாக்கோபு – தேவன் தமது உடன்படிக்கை ஜனத்தை உருவாக்கினார்.</p>
           <div class="timeline-detail"><p>ஆபிரகாமுக்கு தேவன் வாக்குத்தத்தம் அளித்தார். ஈசாக்கு மூலம் சந்ததி தொடர்ந்தது. யாக்கோபின் 12 மகன்கள் இஸ்ரவேலின் 12 கோத்திரங்களின் தந்தைகள் ஆனார்கள்.</p></div>
         </div>
@@ -82,7 +133,10 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <span class="timeline-era">கி.மு. ~1446</span>
-          <h3 class="timeline-title">🌊 புறப்பாடு – Exodus</h3>
+          <h3 class="timeline-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px; vertical-align:middle;"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>
+            புறப்பாடு – Exodus
+          </h3>
           <p class="timeline-desc">மோசே மூலம் இஸ்ரவேல் எகிப்திலிருந்து விடுவிக்கப்பட்டது. பத்து வாதைகள், செங்கடல் பிளத்தல்.</p>
           <div class="timeline-detail"><p>சீனாய் மலையில் பத்து கட்டளைகள் வழங்கப்பட்டன. உடன்படிக்கை ஏற்படுத்தப்பட்டது. ஆசரிப்புக்கூடாரம் கட்டப்பட்டது. 40 ஆண்டுகள் வனாந்தர அலைச்சல்.</p></div>
         </div>
@@ -92,7 +146,10 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <span class="timeline-era">கி.மு. ~1406</span>
-          <h3 class="timeline-title">⚔️ கானான் – Conquest</h3>
+          <h3 class="timeline-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px; vertical-align:middle;"><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/><line x1="13" y1="19" x2="19" y2="13"/><line x1="16" y1="16" x2="20" y2="20"/><line x1="19" y1="21" x2="20" y2="20"/><line x1="14.5" y1="17.5" x2="18" y2="21"/></svg>
+            கானான் – Conquest
+          </h3>
           <p class="timeline-desc">யோசுவாவின் தலைமையில் வாக்குத்தத்த தேசம் சுதந்தரிக்கப்பட்டது.</p>
           <div class="timeline-detail"><p>யோர்தான் நதி கடத்தல், எரிகோ மதிலின் வீழ்ச்சி, தேசப் பங்கீடு. "நானும் என் வீட்டாரும் கர்த்தரையே சேவிப்போம்" – யோசுவா 24:15</p></div>
         </div>
@@ -102,7 +159,10 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <span class="timeline-era">கி.மு. ~1050</span>
-          <h3 class="timeline-title">👑 ராஜ்யம் – Kingdom</h3>
+          <h3 class="timeline-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px; vertical-align:middle;"><path d="M5 15l-3-3 3-3"/><path d="M19 15l3-3-3-3"/><path d="M12 21l-3-3 3-3"/><path d="M12 3l-3 3 3 3"/><path d="M5 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            ராஜ்யம் – Kingdom
+          </h3>
           <p class="timeline-desc">சவுல், தாவீது, சாலொமோன் – இஸ்ரவேலின் ஐக்கிய ராஜ்யம் ஸ்தாபிக்கப்பட்டது.</p>
           <div class="timeline-detail"><p>தாவீதின் உடன்படிக்கை, எருசலேம் ஆலயம் கட்டப்பட்டது, சாலொமோனின் ஞானம். பின்னர் ராஜ்யம் இரண்டாக பிரிந்தது.</p></div>
         </div>
@@ -112,7 +172,10 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <span class="timeline-era">கி.மு. 760–460</span>
-          <h3 class="timeline-title">📢 தீர்க்கதரிசிகள் – Prophets</h3>
+          <h3 class="timeline-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px; vertical-align:middle;"><path d="M5 15l-3-3 3-3"/><path d="M19 15l3-3-3-3"/><path d="M12 21l-3-3 3-3"/><path d="M12 3l-3 3 3 3"/><path d="M5 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            ராஜாக்கள் & தீர்க்கதரிசிகள் – Kings & Prophets
+          </h3>
           <p class="timeline-desc">ஏசாயா, எரேமியா, எசேக்கியேல் போன்ற தீர்க்கதரிசிகள் மனந்திரும்ப அழைத்தார்கள்.</p>
           <div class="timeline-detail"><p>பாவத்திற்கு எதிர்ப்பு, மேசியாவின் வருகை பற்றிய தீர்க்கதரிசனங்கள். நியாயத்தீர்ப்பு மற்றும் எதிர்கால மீட்பு நம்பிக்கை வழங்கப்பட்டது.</p></div>
         </div>
@@ -122,7 +185,10 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <span class="timeline-era">கி.மு. 586</span>
-          <h3 class="timeline-title">⛓️ சிறைவாசம் – Exile</h3>
+          <h3 class="timeline-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px; vertical-align:middle;"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.435-4.5.5-6 .5 1.5 1.565 3.857.5 6-.5 1-1 1.62-1 3a2.5 2.5 0 0 0 2.5 2.5z"/><path d="M13.5 14.5A2.5 2.5 0 0 0 16 12c0-1.38-.5-2-1-3-1.072-2.143-.435-4.5.5-6 .5 1.5 1.565 3.857.5 6-.5 1-1 1.62-1 3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+            சிறையிருப்பு – Exile & Captivity
+          </h3>
           <p class="timeline-desc">எருசலேம் அழிக்கப்பட்டது. யூதர்கள் பாபிலோனுக்கு சிறைபிடிக்கப்பட்டனர்.</p>
           <div class="timeline-detail"><p>நெபுகாத்நேச்சர் எருசலேமையும் ஆலயத்தையும் அழித்தார். 70 ஆண்டுகள் சிறைவாசம். தானியேல், எசேக்கியேல் இக்காலத்தின் முக்கிய தீர்க்கதரிசிகள்.</p></div>
         </div>
@@ -132,7 +198,10 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <span class="timeline-era">கி.மு. 538</span>
-          <h3 class="timeline-title">🏛️ திரும்புதல் – Return</h3>
+          <h3 class="timeline-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px; vertical-align:middle;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            திரும்பி வருதல் – Return & Rebuilding
+          </h3>
           <p class="timeline-desc">கோரேஸ் அரசன் கட்டளையால் யூதர்கள் நாடு திரும்பினர். ஆலயமும் மதிலும் மீண்டும் கட்டப்பட்டன.</p>
           <div class="timeline-detail"><p>செருபாபேல் தலைமையில் ஆலயம் கட்டப்பட்டது. எஸ்றா ஆன்மீக சீர்திருத்தம் செய்தார். நெகேமியா மதில்களை கட்டினார். மல்கியா கடைசி தீர்க்கதரிசி.</p></div>
         </div>
@@ -144,26 +213,64 @@
 
 <!-- ========== VERSE BANNER 2 ========== -->
 <div class="verse-banner">
-  <p class="verse-text">"உன் தேவனாகிய கர்த்தரை உன் முழு இருதயத்தோடும் உன் முழு ஆத்துமாவோடும் உன் முழுப் பலத்தோடும் நேசிப்பாயாக."</p>
-  <p class="verse-ref">— உபாகமம் 6:5</p>
+  <div class="verse-container reveal">
+    <div class="verse-quote-icon quote-left">“</div>
+    <p class="verse-text">"உன் தேவனாகிய கர்த்தரை உன் முழு இருதயத்தோடும் உன் முழு ஆத்துமாவோடும் உன் முழுப் பலத்தோடும் நேசிப்பாயாக."</p>
+    <div class="verse-divider"></div>
+    <p class="verse-ref">உபாகமம் 6:5</p>
+    <div class="verse-quote-icon quote-right">“</div>
+  </div>
 </div>
 
 <!-- ========== BOOKS SECTION ========== -->
 <section class="section section-parchment" id="books">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-icon">📚</span>
+    <div class="section-header">
+      <div class="section-icon-wrap">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      </div>
       <h2 class="section-title">Books of the Old Testament</h2>
       <p class="section-title-tamil">பழைய ஏற்பாட்டின் புத்தகங்கள்</p>
       <div class="section-line"></div>
     </div>
 
+    <!-- ========== SEARCH & PROGRESS ========== -->
+    <div class="books-controls reveal">
+      <div class="search-wrapper">
+        <span class="search-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span>
+        <input type="text" id="book-search" placeholder="Search books, authors, or key figures..." aria-label="Search Old Testament Books">
+      </div>
+      <div class="progress-container">
+        <div class="progress-stats">
+          <span class="progress-label">Study Progress:</span>
+          <span id="progress-percent">0%</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div id="progress-bar-fill" class="progress-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="tabs-container reveal">
       <div class="tab-buttons">
-        <button class="tab-btn active" data-category="law">📜 நியாயப்பிரமாணம்<br><small>Law / Pentateuch</small></button>
-        <button class="tab-btn" data-category="history">🏰 வரலாறு<br><small>History</small></button>
-        <button class="tab-btn" data-category="poetry">🎵 கவிதை / ஞானம்<br><small>Poetry / Wisdom</small></button>
-        <button class="tab-btn" data-category="prophets">📢 தீர்க்கதரிசிகள்<br><small>Prophets</small></button>
+        <button class="tab-btn active" data-category="law">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          நியாயப்பிரமாணம்<br><small>Law / Pentateuch</small>
+        </button>
+        <button class="tab-btn" data-category="history">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          வரலாறு<br><small>History</small>
+        </button>
+        <button class="tab-btn" data-category="poetry">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          கவிதை / ஞானம்<br><small>Poetry / Wisdom</small>
+        </button>
+        <button class="tab-btn" data-category="prophets">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="m3 21 1.96-1.96"/><circle cx="14" cy="10" r="7"/><path d="m2 2 1.96 1.96"/></svg>
+          தீர்க்கதரிசிகள்<br><small>Prophets</small>
+        </button>
       </div>
       <div id="books-grid" class="books-grid"></div>
     </div>
@@ -174,7 +281,9 @@
 <section class="section section-dark" id="themes">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-icon">🔑</span>
+      <div class="section-icon-wrap">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4c.9.4 2 .4 2.9-.1l5.4-5.4c.4-.4.6-.9.6-1.4s-.2-1-.6-1.4l-2.2-2.2c-.4-.4-.9-.6-1.4-.6s-1 .2-1.4.6l-5.4 5.4c-.5.9-.5 2-.1 2.9L11 14v2h-3v3H2Z"/><circle cx="17.5" cy="6.5" r="2.5"/></svg>
+      </div>
       <h2 class="section-title">Key Themes</h2>
       <p class="section-title-tamil">முக்கிய கருப்பொருட்கள்</p>
       <div class="section-line"></div>
@@ -182,31 +291,41 @@
 
     <div class="themes-grid">
       <div class="theme-card reveal">
-        <span class="theme-icon">📜</span>
+        <span class="theme-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </span>
         <h3 class="theme-title">Covenant</h3>
         <p class="theme-title-tamil">உடன்படிக்கை</p>
         <p class="theme-desc">தேவன் தமது ஜனங்களுடன் ஏற்படுத்திய புனிதமான உறவு ஒப்பந்தம். ஆபிரகாம், மோசே, தாவீது உடன்படிக்கைகள்.</p>
       </div>
       <div class="theme-card reveal">
-        <span class="theme-icon">⚖️</span>
+        <span class="theme-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/></svg>
+        </span>
         <h3 class="theme-title">Law</h3>
         <p class="theme-title-tamil">நியாயப்பிரமாணம்</p>
         <p class="theme-desc">பரிசுத்த வாழ்க்கைக்கான தேவனுடைய வழிகாட்டுதல். பத்து கட்டளைகள் மற்றும் நடைமுறை சட்டங்கள்.</p>
       </div>
       <div class="theme-card reveal">
-        <span class="theme-icon">🐑</span>
+        <span class="theme-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M20 12h2"/><path d="M2 12h2"/></svg>
+        </span>
         <h3 class="theme-title">Sacrifice</h3>
         <p class="theme-title-tamil">பலி</p>
         <p class="theme-desc">பாவத்திற்கான பரிகாரம் மற்றும் தேவனை அணுகுவதற்கான வழி. கிறிஸ்துவின் பலியின் முன்னிழல்.</p>
       </div>
       <div class="theme-card reveal">
-        <span class="theme-icon">🙇</span>
+        <span class="theme-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16 12-4 4-4-4"/></svg>
+        </span>
         <h3 class="theme-title">Obedience</h3>
         <p class="theme-title-tamil">கீழ்ப்படிதல்</p>
         <p class="theme-desc">தேவனுடைய கட்டளைகளுக்கு கீழ்ப்படிதல் ஆசீர்வாதத்தையும், கீழ்ப்படியாமை தீர்ப்பையும் கொண்டுவருகிறது.</p>
       </div>
       <div class="theme-card reveal">
-        <span class="theme-icon">🔥</span>
+        <span class="theme-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.435-4.5.5-6 .5 1.5 1.565 3.857.5 6-.5 1-1 1.62-1 3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+        </span>
         <h3 class="theme-title">God's Presence</h3>
         <p class="theme-title-tamil">தேவனுடைய பிரசன்னம்</p>
         <p class="theme-desc">ஏதேனிலிருந்து ஆலயம் வரை, தேவன் தமது ஜனங்களோடு வாசம் செய்ய விரும்புகிறார்.</p>
@@ -221,50 +340,346 @@
   <p class="verse-ref">— நீதிமொழிகள் 1:7</p>
 </div>
 
-<!-- ========== CTA ========== -->
-<section class="cta-section" id="cta">
+<!-- ========== ARTIFACTS GALLERY ========== -->
+<section class="section section-dark" id="artifacts">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-icon">🌟</span>
-      <h2 class="section-title">Begin Your Journey</h2>
-      <p class="section-title-tamil">உங்கள் பயணத்தை தொடங்குங்கள்</p>
+    <div class="section-header">
+      <div class="section-icon-wrap">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h2 class="section-title">Biblical Artifacts Gallery</h2>
+      <p class="section-title-tamil">வேதாகம காலத்துப் பொருட்கள்</p>
       <div class="section-line"></div>
     </div>
-    <div class="cta-grid reveal">
-      <a href="#books" class="cta-card">
-        <span class="cta-card-icon">📖</span>
-        <p class="cta-card-title">Start Learning</p>
-        <p class="cta-card-title-tamil">கற்க தொடங்குங்கள்</p>
-      </a>
-      <a href="#" class="cta-card">
-        <span class="cta-card-icon">📥</span>
-        <p class="cta-card-title">Download Notes</p>
-        <p class="cta-card-title-tamil">குறிப்புகளை பதிவிறக்கம்</p>
-      </a>
-      <a href="#" class="cta-card">
-        <span class="cta-card-icon">👥</span>
-        <p class="cta-card-title">Join Bible Study</p>
-        <p class="cta-card-title-tamil">வேதபாடத்தில் சேருங்கள்</p>
-      </a>
+
+    <div class="artifacts-grid">
+      <div class="artifact-card reveal">
+        <div class="artifact-img-wrapper">
+          <img src="ark.png" alt="Ark of the Covenant" class="artifact-img">
+          <div class="artifact-overlay">
+            <div class="artifact-meaning">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><path d="M12 2v20M5 7h14"/></svg>
+              God's Presence
+            </div>
+            <div class="artifact-meaning-tamil">தேவ பிரசன்னம்</div>
+          </div>
+        </div>
+        <div class="artifact-info">
+          <h3 class="artifact-title">உடன்படிக்கை பெட்டி<br><small>Ark of the Covenant</small></h3>
+          <p class="artifact-desc">தேவனுடைய உடன்படிக்கையும், அவருடைய பரிசுத்த பிரசன்னமும் இஸ்ரவேல் மத்தியில் வாசம் செய்ததின் அடையாளம்.</p>
+        </div>
+      </div>
+
+      <div class="artifact-card reveal">
+        <div class="artifact-img-wrapper">
+          <img src="tabernacle.png" alt="The Tabernacle" class="artifact-img">
+          <div class="artifact-overlay">
+            <div class="artifact-meaning">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              Meeting with God
+            </div>
+            <div class="artifact-meaning-tamil">தேவனோடு சந்திப்பு</div>
+          </div>
+        </div>
+        <div class="artifact-info">
+          <h3 class="artifact-title">ஆசரிப்புக்கூடாரம்<br><small>The Tabernacle</small></h3>
+          <p class="artifact-desc">வனாந்தரத்தில் தேவன் தமது ஜனங்களுடன் தங்குவதற்காக உருவாக்கப்பட்ட முதல் புனித ஆலயம்.</p>
+        </div>
+      </div>
+
+      <div class="artifact-card reveal">
+        <div class="artifact-img-wrapper">
+          <img src="sling.png" alt="David's Sling" class="artifact-img">
+          <div class="artifact-overlay">
+            <div class="artifact-meaning">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+              Victory through Faith
+            </div>
+            <div class="artifact-meaning-tamil">விசுவாசத்தின் வெற்றி</div>
+          </div>
+        </div>
+        <div class="artifact-info">
+          <h3 class="artifact-title">தாவீதின் கவண் கல்<br><small>David's Sling</small></h3>
+          <p class="artifact-desc">சிறுவன் தாவீது மாபெரும் கோலியாத்தை வென்றது, மனித பலத்தை விட தேவனுடைய வல்லமை மேலானது என்பதை காட்டுகிறது.</p>
+        </div>
+      </div>
+
+      <div class="artifact-card reveal">
+        <div class="artifact-img-wrapper">
+          <img src="chariot.png" alt="Chariot of Fire" class="artifact-img">
+          <div class="artifact-overlay">
+            <div class="artifact-meaning">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              Place of Worship
+            </div>
+            <div class="artifact-meaning-tamil">ஆராதனை ஸ்தலம்</div>
+          </div>
+        </div>
+        <div class="artifact-info">
+          <h3 class="artifact-title">அக்கினி ரதம்<br><small>Chariot of Fire</small></h3>
+          <p class="artifact-desc">எலியா தீர்க்கதரிசி பரலோகிற்கு எடுத்துக்கொள்ளப்பட்ட நிகழ்வு, மரணத்தை வெல்லும் தேவனுடைய வல்லமையை குறிக்கிறது.</p>
+        </div>
+      </div>
+
+      <!-- NEW ARTIFACT 5: BREASTPLATE -->
+      <div class="artifact-card reveal">
+        <div class="artifact-img-wrapper">
+          <img src="breastplate_of_high_priest_1775671243422.png" alt="High Priest Breastplate" class="artifact-img">
+          <div class="artifact-overlay">
+            <div class="artifact-meaning">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+              United Tribes
+            </div>
+            <div class="artifact-meaning-tamil">ஐக்கியப்பட்ட கோத்திரங்கள்</div>
+          </div>
+        </div>
+        <div class="artifact-info">
+          <h3 class="artifact-title">ஆசாரியரின் மார்ப்பதக்கம்<br><small>High Priest Breastplate</small></h3>
+          <p class="artifact-desc">யாத்திராகமம் 28:15–21. 12 விலையுயர்ந்த கற்களைக் கொண்டது, ஒவ்வொன்றும் இஸ்ரவேலின் 12 கோத்திரங்களைக் குறிக்கின்றன.</p>
+        </div>
+      </div>
+
+      <!-- NEW ARTIFACT 6: MENORAH -->
+      <div class="artifact-card reveal">
+        <div class="artifact-img-wrapper">
+          <img src="golden_menorah_lampstand_1775671273249.png" alt="Golden Menorah" class="artifact-img">
+          <div class="artifact-overlay">
+            <div class="artifact-meaning">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              Light of God
+            </div>
+            <div class="artifact-meaning-tamil">தேவனுடைய ஒளி</div>
+          </div>
+        </div>
+        <div class="artifact-info">
+          <h3 class="artifact-title">பொன் குத்துவிளக்கு<br><small>Golden Menorah</small></h3>
+          <p class="artifact-desc">யாத்திராகமம் 25:31–40. ஏழு கிளைகளைக் கொண்ட பொன்னால் ஆன விளக்கு, தேவனுடைய மாறாத ஒளியைக் குறிக்கிறது.</p>
+        </div>
+      </div>
+
+      <!-- NEW ARTIFACT 7: TABLE OF SHOWBREAD -->
+      <div class="artifact-card reveal">
+        <div class="artifact-img-wrapper">
+          <img src="table_of_showbread_1775671295669.png" alt="Table of Showbread" class="artifact-img">
+          <div class="artifact-overlay">
+            <div class="artifact-meaning">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              God's Provision
+            </div>
+            <div class="artifact-meaning-tamil">தேவனுடைய பராமரிப்பு</div>
+          </div>
+        </div>
+        <div class="artifact-info">
+          <h3 class="artifact-title">சமுகத்தப்ப மேஜை<br><small>Table of Showbread</small></h3>
+          <p class="artifact-desc">யாத்திராகமம் 25:23–30. 12 அப்பங்கள் வைக்கப்படும் மேஜை, இஸ்ரவேல் கோத்திரங்களுக்குத் தேவன் செய்யும் பராமரிப்பின் அடையாளம்.</p>
+        </div>
+      </div>
+
+      <!-- NEW ARTIFACT 8: ALTAR OF INCENSE -->
+      <div class="artifact-card reveal">
+        <div class="artifact-img-wrapper">
+          <img src="altar_of_incense_1775671471643.png" alt="Altar of Incense" class="artifact-img">
+          <div class="artifact-overlay">
+            <div class="artifact-meaning">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><path d="M12 2v10"/><path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0Z"/></svg>
+              Prayers of Saints
+            </div>
+            <div class="artifact-meaning-tamil">பரிசுத்தவான்்களின் ஜெபம்</div>
+          </div>
+        </div>
+        <div class="artifact-info">
+          <h3 class="artifact-title">தூபபீடம்<br><small>Altar of Incense</small></h3>
+          <p class="artifact-desc">யாத்திராகமம் 30:1–10. பரிசுத்த ஸ்தலத்தில் நறுமணமுள்ள தூபம் காட்டப்படும் பீடம், இது ஜெபங்களின் அடையாளமாகும்.</p>
+        </div>
+      </div>
+
+      <!-- NEW ARTIFACT 9: AARON'S ROD -->
+      <div class="artifact-card reveal">
+        <div class="artifact-img-wrapper">
+          <img src="aarons_rod_budded_1775671492449.png" alt="Aaron's Rod" class="artifact-img">
+          <div class="artifact-overlay">
+            <div class="artifact-meaning">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><path d="M12 2v20"/><path d="M12 6a4 4 0 0 1 4 4c0 2-3 6-3 6h-2s-3-4-3-6a4 4 0 0 1 4-4Z"/></svg>
+              Chosen by God
+            </div>
+            <div class="artifact-meaning-tamil">தேவனால் தெரிந்துகொள்ளப்பட்டவர்</div>
+          </div>
+        </div>
+        <div class="artifact-info">
+          <h3 class="artifact-title">ஆரோனின் துளிர்த்த கோல்<br><small>Aaron's Rod</small></h3>
+          <p class="artifact-desc">எண்ணாகமம் 17:8. அற்புதமாகத் துளிர்த்து பூப்பூத்த கோல், ஆரோனின் ஆசாரியத்துவத்தை உறுதிப்படுத்தியது.</p>
+        </div>
+      </div>
+
+      <!-- NEW ARTIFACT 10: POT OF MANNA -->
+      <div class="artifact-card reveal">
+        <div class="artifact-img-wrapper">
+          <img src="golden_pot_of_manna_original_1775671510643.png" alt="Pot of Manna" class="artifact-img">
+          <div class="artifact-overlay">
+            <div class="artifact-meaning">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px;"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Heavenly Bread
+            </div>
+            <div class="artifact-meaning-tamil">பரலோக அப்பம்</div>
+          </div>
+        </div>
+        <div class="artifact-info">
+          <h3 class="artifact-title">பொற்பாத்திரம்<br><small>Pot of Manna</small></h3>
+          <p class="artifact-desc">யாத்திராகமம் 16:33. வனாந்தரத்தில் தேவன் தந்த மன்னாவை நினைவுச்சின்னமாக வைக்கப்பட்ட பொற்பாத்திரம்.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ========== INTERACTIVE MAP ========== -->
+<section class="section section-parchment" id="map">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-icon-wrap">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+      </div>
+      <h2 class="section-title">Conquest & Journey Map</h2>
+      <p class="section-title-tamil">வேதாகம தேசங்களின் வரைபடம்</p>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="map-container reveal">
+      <div class="map-wrapper">
+        <img src="map.png" alt="Ancient Near East Map" class="map-img">
+        
+        <!-- Hotspots -->
+        <div class="map-hotspot" style="top: 25%; right: 15%;" onclick="openMapDetail('eden')">
+          <div class="hotspot-pulse"></div>
+          <div class="hotspot-label">Garden of Eden</div>
+        </div>
+        
+        <div class="map-hotspot" style="top: 65%; left: 10%;" onclick="openMapDetail('egypt')">
+          <div class="hotspot-pulse"></div>
+          <div class="hotspot-label">Egypt</div>
+        </div>
+
+        <div class="map-hotspot" style="top: 60%; left: 25%;" onclick="openMapDetail('sinai')">
+          <div class="hotspot-pulse"></div>
+          <div class="hotspot-label">Mt. Sinai</div>
+        </div>
+
+        <div class="map-hotspot" style="top: 48%; left: 32%;" onclick="openMapDetail('jericho')">
+          <div class="hotspot-pulse"></div>
+          <div class="hotspot-label">Jericho</div>
+        </div>
+
+        <div class="map-hotspot" style="top: 48%; right: 35%;" onclick="openMapDetail('babylon')">
+          <div class="hotspot-pulse"></div>
+          <div class="hotspot-label">Babylon</div>
+        </div>
+      </div>
+
+      <div class="map-info-panel" id="map-info-panel">
+        <div class="map-info-placeholder">
+          <p>வரைபடத்தில் உள்ள இடங்களை கிளிக் செய்து அதன் சரித்திரத்தை அறியுங்கள்...</p>
+          <p class="map-info-hint">Click on the pulse markers to explore biblical history.</p>
+        </div>
+        <div class="map-info-content" id="map-info-content" style="display: none;">
+          <h3 id="map-loc-title"></h3>
+          <p id="map-loc-tamil"></p>
+          <div class="map-loc-divider"></div>
+          <p id="map-loc-desc"></p>
+          <div id="map-loc-books" class="map-loc-books"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- ========== YOUTUBE PLAYLIST ========== -->
+<section class="section section-parchment" id="videos">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-icon-wrap">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <h2 class="section-title">Video Teachings</h2>
+      <p class="section-title-tamil">வீடியோ போதனைகள்</p>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="youtube-section reveal">
+      <div class="youtube-embed-wrapper" id="video-container">
+        <div class="video-overlay" onclick="loadYoutubeVideo()">
+          <img src="youtube-thumb.jpg" alt="OT Survey Thumb" class="video-thumb">
+          <div class="play-trigger">
+            <span class="play-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </span>
+          </div>
+        </div>
+        <div id="yt-iframe-placeholder"></div>
+      </div>
+      <div class="youtube-info">
+        <div class="youtube-info-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <h3 class="youtube-info-title">Old Testament Overview Playlist</h3>
+        <p class="youtube-info-tamil">பழைய ஏற்பாடு கண்ணோட்டம் – முழு வீடியோ தொகுப்பு</p>
+        <p class="youtube-info-desc">Watch the complete video series covering every book of the Old Testament. Subscribe to stay updated with new teachings.</p>
+        <a href="https://www.youtube.com/playlist?list=PL9DXIMm3S_fbo1XYNGlKleSbCURlHwGwQ" target="_blank" rel="noopener noreferrer" class="youtube-playlist-btn">
+          <span class="yt-btn-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </span> Watch Full Playlist on YouTube
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL VERSE BANNER ========== -->
+<div class="verse-banner">
+  <div class="verse-container reveal">
+    <div class="verse-quote-icon quote-left">“</div>
+    <p class="verse-text">"உமது வசனம் என் கால்களுக்குத் தீபமும், என் பாதைக்கு வெளிச்சமுமாயிருக்கிறது."</p>
+    <div class="verse-divider"></div>
+    <p class="verse-ref">சங்கீதம் 119:105</p>
+    <div class="verse-quote-icon quote-right">“</div>
+  </div>
+</div>
+
+
+
 <!-- ========== FOOTER ========== -->
 <footer class="footer">
   <div class="container">
-    <p class="footer-logo">✝ Old Testament Overview</p>
+    <p class="footer-logo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px; display:inline-block; vertical-align:middle;"><path d="M12 2v20M5 7h14"/></svg>
+      J Seeds Bible College
+    </p>
     <div class="footer-links">
-      <a href="#hero">முகப்பு</a>
-      <a href="#timeline">காலவரிசை</a>
-      <a href="#books">புத்தகங்கள்</a>
-      <a href="#themes">கருப்பொருட்கள்</a>
+      <a href="#hero">Home</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#books">Books</a>
+      <a href="#map">Map</a>
+      <a href="#artifacts">Artifacts</a>
+
+
+      <a href="#videos">Videos</a>
     </div>
     <div class="footer-social">
-      <a href="#" title="Facebook">📘</a>
-      <a href="#" title="YouTube">▶️</a>
-      <a href="#" title="Instagram">📷</a>
-      <a href="#" title="Email">✉️</a>
+      <a href="#" title="Facebook">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/playlist?list=PL9DXIMm3S_fbo1XYNGlKleSbCURlHwGwQ" target="_blank" rel="noopener noreferrer" title="YouTube">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.42 5.58a2.78 2.78 0 0 0 1.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.42-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+      </a>
+      <a href="#" title="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="#" title="Email">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
     </div>
     <p class="footer-copy">© 2025 Jebathottam Ministries. All rights reserved.</p>
   </div>
@@ -283,6 +698,7 @@
     </div>
   </div>
 </div>
+</div> <!-- Close main-content -->
 
 <script src="script.js"></script>
 </body>
